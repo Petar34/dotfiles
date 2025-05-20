@@ -33,17 +33,6 @@ bar {
     status_command i3status
     font pango:monospace 10
     tray_output primary
-
-# Pokretanje tray aplikacija
-exec --no-startup-id nm-applet
-exec --no-startup-id volumeicon
-
-# Bar s prikazom trake i ikonama
-bar {
-    status_command i3status
-    font pango:monospace 10
-    tray_output primary
     position top
 }
 
-}
