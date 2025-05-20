@@ -1,11 +1,36 @@
+# Mod tipka (Win/Super)
 set $mod Mod4
+
+# Font
 font pango:monospace 10
 
-# Terminal
-bindsym $mod+Return exec xterm
+# Pokretanje aplikacija
+bindsym $mod+Return exec alacritty
+bindsym $mod+f exec thunar
+bindsym $mod+w exec google-chrome-stable
+bindsym $mod+d exec rofi -show drun
 
-# Restart
+# Screenshot (Print screen tipka)
+bindsym Print exec flameshot gui
+
+# Restart i izlaz
 bindsym $mod+Shift+r restart
-
-# Izlaz
 bindsym $mod+Shift+e exit
+bindsym $mod+Shift+x exec i3lock
+
+# Audio kontrola
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Automatsko pokretanje aplikacija (tray ikone i pozadina)
+exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+exec --no-startup-id feh --bg-scale ~/Slike/pozadina.jpg
+
+# Status bar s tray ikonom
+bar {
+    status_command i3status
+    font pango:monospace 10
+    tray_output primary
+}
