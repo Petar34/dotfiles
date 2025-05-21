@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font
-font pango:monospace 10
+font pango:Ubuntu Mono 10
 
 # Pokretanje aplikacija
 bindsym $mod+Return exec alacritty
@@ -18,22 +18,23 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 bindsym $mod+Shift+x exec i3lock
 
-# Audio kontrola (desktop-friendly)
+# Audio kontrola (pavucontrol i volumeicon podrška)
 bindsym $mod+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-
-# Automatsko pokretanje aplikacija (tray ikone i pozadina)
+# Pokretanje pozadinskih aplikacija
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
-exec --no-startup-id feh --bg-scale ~/Slike/pozadina.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id setxkbmap hr
 
-# Status bar s tray ikonom
+# Status bar
 bar {
     status_command i3status
-    font pango:monospace 10
+    font pango:Ubuntu Mono 10
     tray_output primary
     position top
 }
+
 
