@@ -55,6 +55,7 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias edit='nvim'
+alias wifi='sudo nmtui' 
 
 # Ako postoji ~/.bash_aliases, učitaj i njega
 if [ -f ~/.bash_aliases ]; then
