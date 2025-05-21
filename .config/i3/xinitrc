@@ -1,11 +1,14 @@
 #!/bin/bash
 
-# Postavi pozadinu (ako želiš odmah kod startx)
-feh --bg-scale ~/Slike/pozadina.jpg &
+# Postavi hrvatsku tipkovnicu
+setxkbmap hr
 
-# Pokreni tray aplikacije (nije nužno jer ih već imaš u i3/config, ali možeš)
+# Postavi pozadinu (sliku moraš imati u ~/Pictures)
+feh --bg-scale ~/Pictures/wallpaper.jpg &
+
+# Pokreni tray aplikacije
 nm-applet &
 volumeicon &
 
-# Pokreni i3
+# Pokreni i3 window manager
 exec i3
