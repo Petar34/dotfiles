@@ -56,6 +56,8 @@ alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias edit='nvim'
 alias wifi='sudo nmtui' 
+alias reload='source ~/.bashrc'
+alias cle='clear'
 
 # Ako postoji ~/.bash_aliases, učitaj i njega
 if [ -f ~/.bash_aliases ]; then
