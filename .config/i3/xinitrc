@@ -3,14 +3,12 @@
 # Postavi hrvatsku tipkovnicu
 setxkbmap hr
 
-# Postavi pozadinu (ako postoji slika)
-if [ -f "$HOME/Pictures/wallpaper.jpg" ]; then
-    feh --bg-scale "$HOME/Pictures/wallpaper.jpg" &
-fi
+# Postavi pozadinu (obavezno imaj neku sliku u ~/Pictures)
+feh --bg-scale ~/Pictures/wallpaper.jpg &
 
-# Pokreni tray aplikacije (ako postoje)
-command -v nm-applet >/dev/null && nm-applet &
-command -v volumeicon >/dev/null && volumeicon &
+# Pokreni tray aplikacije
+nm-applet &
+volumeicon &
 
-# Pokreni i3
+# Pokreni i3 window manager
 exec i3
