@@ -1,4 +1,4 @@
-# ~/.bashrc - Petar (Ubuntu 24.04 i3 setup)
+# ~/.bashrc - Petar (Debian i3 setup)
 
 # Ne pokreći ako nije interaktivna shell
 case $- in
@@ -26,7 +26,7 @@ fi
 # Prompt
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-# Naslov terminala
+# Naslov terminala (xterm, rxvt, itd.)
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;\u@\h: \w\a\]$PS1"
@@ -55,7 +55,7 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias edit='nvim'
-alias wifi='sudo nmtui' 
+alias wifi='sudo nmtui'
 alias reload='source ~/.bashrc'
 alias cle='clear'
 
