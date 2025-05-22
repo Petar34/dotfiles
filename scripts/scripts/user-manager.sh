@@ -1,4 +1,9 @@
 #!/bin/bash
+# Provjera je li korisnik root
+if [ "$EUID" -ne 0 ]; then
+  echo "[GREŠKA] Pokreni ovu skriptu kao root (sudo)."
+  exit 1
+fi
 
 while true; do
   clear
